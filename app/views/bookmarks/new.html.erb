@@ -1,5 +1,15 @@
+<h1>Add a movie to <%= @list.name %></h1>
+
 <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie, collection: Movie.order(:title), prompt: "Choose a movie" %>
+  <%= f.error_notification %>
+
+  <%= f.association :movie,
+  collection: Movie.order(:title),
+  prompt: "Choose a movie" %>
+
   <%= f.input :comment %>
-  <%= f.button :submit %>
+
+  <%= f.button :submit, "Add bookmark" %>
 <% end %>
+
+<%= link_to "Cancel", list_path(@list) %>

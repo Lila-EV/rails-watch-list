@@ -9,6 +9,9 @@
         <strong><%= bookmark.movie.title %></strong>
         <% if bookmark.comment.present? %>
           — <%= bookmark.comment %>
+          <%= button_to "Remove bookmark",
+                  bookmark_path(bookmark),
+                  method: :delete %>
         <% end %>
       </li>
     <% end %>
