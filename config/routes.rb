@@ -7,13 +7,9 @@ Rails.application.routes.draw do
 
   Rails.application.routes.draw do
   resources :lists, only: %i[index show new create]
-  end
-
-  Rails.application.routes.draw do
   resources :lists, only: [] do
     resources :bookmarks, only: %i[new create]
   end
-
   resources :bookmarks, only: :destroy
   end
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)

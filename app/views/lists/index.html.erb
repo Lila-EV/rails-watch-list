@@ -1,1 +1,9 @@
-<% <h1> Popcorn Time! </h1> %>
+<h1> Movie Time! </h1>
+
+<p>Log your favourite movies 🍿</p>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>

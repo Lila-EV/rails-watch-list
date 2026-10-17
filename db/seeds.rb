@@ -12,3 +12,7 @@ Movie.create(title: "The Batman", overview: "When a sadistic serial killer begin
 Movie.create(title: "The Shawshank Redemption", overview: "Framed in the 1940s for double murder, upstanding banker Andy Dufresne begins a new life at the Shawshank prison", poster_url: "https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg", rating: 8.7)
 Movie.create(title: "Groundhog Day", overview: "A curmudgeonly weatherman finds himself stuck in a time loop and is forced to relive the same day over and over again.", poster_url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.themoviedb.org%2Ft%2Fp%2Foriginal%2FkatMtDlCbCIi7KheS2ENUjLOben.jpg&f=1&nofb=1&ipt=c398b87bfcdfa9e56d2a772fc22e5ae2612797b68ccc0f2dd7659b9a352dbf64&ipo=images", rating: 7.9)
 Movie.create(title: "Lilo and Stitch", overview: "A young and parentless girl adopts a 'dog' from the local pound, completely unaware that it's supposedly a dangerous scientific experiment ", poster_url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.themoviedb.org%2Ft%2Fp%2Foriginal%2FcSSet4xyQB7bmeOgftaeEEIZqzG.jpg&f=1&nofb=1&ipt=8f7aad12d78677ae8023ca69d36d9160f8230108f14fa124463b8787a8e6573d&ipo=images", rating: 10)
+
+List.create(name: "Family")
+List.create(name: "Drama")
+List.create(name: "Superhero")
