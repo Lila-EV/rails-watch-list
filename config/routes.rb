@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   Rails.application.routes.draw do
-  resources :lists, only: %i[index show new create]
+  resources :lists, only: %i[ index show new create ]
   resources :lists, only: [] do
-    resources :bookmarks, only: %i[new create]
+    resources :bookmarks, only: %i[ new create ]
   end
   resources :bookmarks, only: :destroy
   resources :movies, only: :show

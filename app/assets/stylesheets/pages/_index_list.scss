@@ -1,0 +1,55 @@
+.banner {
+  min-height: 320px;
+  background: linear-gradient(rgba(255, 105, 180, 0.55), rgba(255, 182, 193, 0.55)),
+    url("movie-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.2);
+
+  h1 {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+}
+
+.card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+  }
+
+  .card-title a {
+    color: #e83e8c;
+    font-weight: 600;
+
+    &:hover {
+      color: #ff69b4;
+    }
+  }
+
+  .btn-primary {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+
+    &:hover {
+      background-color: #e83e8c;
+      border-color: #e83e8c;
+    }
+  }
+}
+
+body {
+  background-color: #fff5f9;
+}
