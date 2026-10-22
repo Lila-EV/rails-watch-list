@@ -1,26 +1,21 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('family_banner.jpg') %>);">
+<div class="banner text-center text-white d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="display-3 fw-bold"><%= @list.name %></h1>
+    <p class="lead">Movies in this list 🍿</p>
+  </div>
+</div>
 
-<h1><%= @list.name %></h1>
-
-<h2>Movies in this list</h2>
-
-<% if @list.bookmarks.any? %>
-  <ul>
-    <% @list.bookmarks.includes(:movie).each do |bookmark| %>
-      <li>
-        <strong><%= bookmark.movie.title %></strong>
-        <% if bookmark.comment.present? %>
-          — <%= bookmark.comment %>
-          <%= button_to "Remove bookmark",
-                  bookmark_path(bookmark),
-                  method: :delete %>
-        <% end %>
-      </li>
+<div class="container my-5">
+  <div class="row g-4">
+    <% @list.movies.each do |movie| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><%= movie.title %></h5>
+            <p class="card-text text-muted"><%= movie.overview %></p>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </ul>
-<% else %>
-  <p>No movies have been added to this list yet.</p>
-<% end %>
-
-<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
-<%= link_to "Back to homepage", lists_path %>
+  </div>
+</div>
